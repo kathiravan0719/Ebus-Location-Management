@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    background-color: rgba(0, 0, 0, 0.856);
+    background-image: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+span {
+    display: block;
+}
+
+
+/* frontpage */
+
+.frontpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+.frontpage>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    margin-top: 30px;
+    background-color: rgba(240, 248, 255, 0.795);
+    border-radius: 20px;
+    height: 30px;
+    width: 400px;
+}
+
+.frontpage>div>div a:hover {
+    background-color: rgba(4, 204, 4, 0.349);
+
+}
+
+
+
+
+.frontwrapper {
+    background: rgba(42, 43, 42, 0.692);
+    background-attachment: fixed;
+    height: 40%;
+    width: 40%;
+    margin: 200px auto;
+    border-radius: 20px;
+
+}
+
+.frontwrapper>div h1 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: rgba(255, 247, 247, 0.897);
+    margin-bottom: 60px;
+}
+
+.frontwrapper>div h1 .fp3 {
+    text-align: center;
+}
+
+.frontwrapper>div h1 .fp3,
+.fp4 {
+    color: rgba(255, 123, 0, 0.986);
+}
+
+
+
+.frontwrapper>div>div a {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    color: black;
+
+}
+
+/* login page */
+.loginwrapper {
+    background: rgba(42, 43, 42, 0.692);
+    background-attachment: fixed;
+    height: 40%;
+    width: 40%;
+    margin: 200px auto;
+    border-radius: 20px;
+}
+
+.loginwrapper h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: rgb(221, 221, 221);
+    background-color: rgba(0, 0, 0, 0.747);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.secpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#loginform {
+
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#loginform>.mail {
+    color: rgba(240, 248, 255, 0.904);
+    margin-bottom: 25px;
+}
+
+#loginform>.word {
+    color: rgba(240, 248, 255, 0.904);
+    margin-bottom: 25px;
+}
+
+
+.mail>input {
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.word>input {
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.logbtn button {
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: rgba(255, 123, 0, 0.959);
+    color: rgba(0, 0, 0, 0.925);
+    border-radius: 20px;
+    border: none;
+    width: 110px;
+    height: 50px;
+    margin-top: 55px;
+    cursor: pointer;
+}
+
+.logbtn button:hover {
+    background-color: rgba(4, 204, 4, 0.349);
+    transition: 0.2s;
+}
+
+/* registration page */
+
+
+.regwrapper {
+    background: rgba(42, 43, 42, 0.692);
+    background-attachment: fixed;
+    height: 80%;
+    width: 40%;
+    margin: 200px auto;
+    border-radius: 20px;
+}
+
+.regwrapper h2 {
+    font-family: "Poppins", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: rgb(221, 221, 221);
+    background-color: rgba(0, 0, 0, 0.747);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.thirpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+
+#Registerform {
+
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+
+#Registerform>.first {
+    color: rgba(240, 248, 255, 0.904);
+    margin-bottom: 25px;
+}
+
+#Registerform>.first>input {
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+#Registerform>.last {
+    color: rgba(240, 248, 255, 0.904);
+    margin-bottom: 25px;
+}
+
+#Registerform>.last>input {
+    font-size: 20px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+
+#Registerform>.mail {
+    color: rgba(240, 248, 255, 0.904);
+    margin-bottom: 25px;
+}
+
+#Registerform>.word {
+    color: rgba(240, 248, 255, 0.904);
+    margin-bottom: 25px;
+}
+
+
+
+.regbtn button {
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: rgba(255, 123, 0, 0.959);
+    color: rgba(0, 0, 0, 0.925);
+    border-radius: 20px;
+    border: none;
+    width: 145px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.regbtn button:hover {
+    background-color: rgba(4, 204, 4, 0.349);
+    transition: 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+
+    .frontwrapper,
+    .loginwrapper,
+    .regwrapper {
+        width: 70%;
+        margin: 100px auto;
+    }
+
+    .frontpage>div>div,
+    .secpage,
+    .thirpage {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mail>input,
+    .word>input,
+    #Registerform input {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .frontwrapper,
+    .loginwrapper,
+    .regwrapper {
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .logbtn button,
+    .regbtn button {
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}

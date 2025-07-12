@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Bus Info</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="post-bus.css">
+  <script type="module" src="js/auth-guard.js"></script>
+
+</head>
+<body>
+  <div class="form-container">
+    <h2>Post Bus Information</h2>
+    <form id="busForm">
+      <label for="busName">Bus Name:</label>
+      <input type="text" id="busName" required />
+
+      <label for="busType">Type:</label>
+      <input type="text" id="busType" required />
+
+      <label for="contact">Contact:</label>
+      <input type="text" id="contact" required />
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script type="module" src="./post-bus.js"></script>
+  
+</body>
+</html>

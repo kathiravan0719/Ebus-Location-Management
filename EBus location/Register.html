@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="regwrapper">
+    <div class="thirpage">
+      <div class="container">
+
+        <!-- title of form -->
+        <h2>Registration</h2>
+
+        <!-- form of registration page -->
+        <div>
+          <form id="Registerform">
+            <!-- firstname of the form -->
+            <div class="first">
+              <label for="firstname">FirstName:</label>
+              <input type="text" placeholder="enter your firstname" id="firstname" required />
+            </div>
+
+            <!-- lastname of the form -->
+            <div class="last">
+              <label for="lastname">LastName:</label>
+              <input type="text" placeholder="enter your Lastname" id="Lastname" required />
+            </div>
+
+            <!-- email id of the form -->
+            <div class="mail">
+              <label for="email">E-mail id:</label>
+              <input type="email" placeholder="enter your email" id="email" required />
+            </div>
+            <!-- password of the form -->
+            <div class="word">
+              <label for="password">Password:</label>
+              <input type="password" placeholder="enter your password" id="password" required />
+            </div>
+            <!-- button of the form -->
+            <div class="regbtn">
+              <button type="submit">Register</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <script type="module">
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+// Your Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyCL5r_UgC4yR9vSwf_O0iyp-P502fX1P14",
+  authDomain: "loginform-93e3d.firebaseapp.com",
+  projectId: "loginform-93e3d",
+  storageBucket: "loginform-93e3d.appspot.com",
+  messagingSenderId: "461980811863",
+  appId: "1:461980811863:web:b9285f33d027b862239912"
+};
+
+// Init Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// Handle Register
+const form = document.getElementById("Registerform");
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    alert("Registration successful!");
+    window.location.href = "Login.html";
+  } catch (err) {
+    alert("Registration failed: " + err.message);
+  }
+});
+
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Container for dashboard */
+.dashboard-container {
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.dashboard-container h2 {
+  color: #333;
+  margin-bottom: 25px;
+}
+
+/* Navigation list */
+.dashboard-container ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dashboard-container ul li {
+  background-color: #4facfe;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.dashboard-container ul li:hover {
+  background-color: #00c6ff;
+}
+
+.dashboard-container ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  display: block;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .dashboard-container {
+    padding: 20px;
+  }
+
+  .dashboard-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-container ul li {
+    font-size: 1rem;
+  }
+}

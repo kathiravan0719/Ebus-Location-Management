@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <div class="loginwrapper">
+    <div class="secpage">
+      <div class="container">
+
+        <!-- title of form -->
+        <h2>LOGIN</h2>
+        <div>
+          <!-- form of login -->
+          <form id="loginform">
+
+            <!-- email of the form -->
+            <div class="mail">
+              <label for="email">E-mail id:</label>
+              <input type="email" placeholder="enter your email" id="email" required /></br>
+            </div>
+
+            <!-- password of the form -->
+            <div class="word">
+              <label for="password">Password:</label>
+              <input type="password" placeholder="enter your password" id="password" required /></br>
+            </div>
+
+            <!-- button of the form -->
+            <div class="logbtn">
+              <button type="submit">Login</button></br>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+    import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js";
+
+    // Your Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyCL5r_UgC4yR9vSwf_O0iyp-P502fX1P14",
+      authDomain: "loginform-93e3d.firebaseapp.com",
+      projectId: "loginform-93e3d",
+      storageBucket: "loginform-93e3d.appspot.com",
+      messagingSenderId: "461980811863",
+      appId: "1:461980811863:web:b9285f33d027b862239912"
+    };
+
+    // Init Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    // Handle Login
+    const form = document.getElementById("loginform");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+        alert("Login successful!");
+        window.location.href = "dashboard.html";
+      } catch (err) {
+        alert("Login failed: " + err.message);
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

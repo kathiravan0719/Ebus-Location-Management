@@ -1,0 +1,90 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* Container for form and results */
+.search-container {
+  background-color: #fff;
+  padding: 30px 35px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.search-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* Form inputs */
+#searchForm label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: 600;
+  color: #444;
+}
+
+#searchForm input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Button */
+#searchForm button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0072ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#searchForm button:hover {
+  background-color: #005ac1;
+}
+
+/* Results box */
+#results {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .search-container {
+    padding: 20px;
+  }
+
+  #searchForm button,
+  #searchForm input {
+    font-size: 15px;
+  }
+}
